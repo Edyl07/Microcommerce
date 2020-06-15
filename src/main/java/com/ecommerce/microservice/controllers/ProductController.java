@@ -68,6 +68,14 @@ public class ProductController {
 		return productDao.findByPrixGreaterThan(prixLimit);
 	}
 	
+	
+	/*@GetMapping(value= "/AdminProduit")
+	public List<Product> marge(){
+		List<Product> product1 = productDao.calculerMargeProduit();
+		
+		return product1;
+	}*/
+	
 	@GetMapping(value= "TriProduits")
 	public List<Product> trierProduitsParOrdreAlphabetique(){
 		List<Product> product1 = productDao.findAllByOrderByNomAsc();
