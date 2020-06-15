@@ -67,5 +67,10 @@ public class ProductController {
 	public List<Product> testRequest(@PathVariable int prixLimit){
 		return productDao.findByPrixGreaterThan(prixLimit);
 	}
-
+	
+	@GetMapping(value= "TriProduits")
+	public List<Product> trierProduitsParOrdreAlphabetique(){
+		List<Product> product1 = productDao.findAllByOrderByNomAsc();
+		return product1;
+	}
 }
